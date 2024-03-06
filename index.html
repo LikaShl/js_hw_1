@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Hello world!
+    <script>
+        // task 1 //
+        let str = "HELlo from oTher Planet. I'm fRoM the SUN. My name is DMYTRO";
+str = str.toLowerCase();
+let firstLetter = str[0];
+firstLetter = firstLetter.toUpperCase();
+let secondPhrase = str[25];
+secondPhrase = secondPhrase.toUpperCase();
+let star = str[38];
+star = star.toUpperCase();
+let thirdPhrase = str[43];
+thirdPhrase = thirdPhrase.toUpperCase();
+let name = str[54];
+name = name.toUpperCase();
+let firstPart = str.slice(1,24);
+let secondPart = str.slice(26,37);
+let thirdPart = str.slice(39,42)
+let forthPart = str.slice(44,53);
+let fifthPart = str.slice(55,60);
+// first version // 
+console.log(firstLetter + firstPart + " " + secondPhrase + secondPart + " " + star + thirdPart + " " + thirdPhrase + forthPart + " " + name + fifthPart)
+//second version//
+str = firstLetter.concat(firstPart," ", secondPhrase, secondPart," ", star, thirdPart," ",  thirdPhrase, forthPart, " ", name, fifthPart);
+console.log(str)
+
+// task 2 //
+// «Я добираюся до офісу за А хвилин»
+// В якості «А» -  змінна = шлях, що складається:
+//- Я прокидаюся о 8:00. Чищу зуби та снідаю за 20 хвилин. 
+//Збираю з собою обід ще за 4 хв,
+// -йду до зупинки транспорту 7хв. 
+//Маршрутка їздить що 10 хв, тобто 8:00, 8:10, 8:20....
+//- автобусом їхати 35 хв. 
+//Потім добираюся до кабінету пішки ще 3 хвилини. //
+
+let  way;
+let breakfast = 20;
+let lanchbox = 4;
+let wayToBusStop = 7;
+let busWaiting = 10 - (breakfast+lanchbox+wayToBusStop)%10;
+console.log(busWaiting);
+let busWay = 35;
+let wayToRoom = 3;
+way = breakfast+lanchbox+wayToBusStop+busWaiting+busWay+wayToRoom;
+console.log("Я добираюся до офісу за "+ way + " хвилин");
+    </script>
+</body>
+</html>
